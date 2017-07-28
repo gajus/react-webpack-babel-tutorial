@@ -1,7 +1,4 @@
-## Webpack / React Tutorial
+```bash
+npm install && npm run build && http-server -p 8008 && open http://127.0.0.1:8080
 
-This tutorial helps you set up a simple React site bundled with Webpack.
-
-Follow along step-by-step at [http://www.react.express/webpack](http://www.react.express/webpack)
-
-![Example](react-hello-world.png)
+```
