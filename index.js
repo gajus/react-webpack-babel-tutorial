@@ -1,22 +1,39 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Aux from 'react-aux';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 
-const styles = {
-  app: {
-    paddingTop: 40,
-    textAlign: 'center',
-  },
-}
-
-class App extends Component {
-  render() {
-    return (
-      <div style={styles.app}>
-        Welcome to React!
-      </div>
-    )
+class Foo extends Component {
+  render () {
+    return <div>
+      FOO
+    </div>;
   }
 }
 
-const root = document.querySelector('#app')
-ReactDOM.render(<App />, root)
+class Bar extends Component {
+  render () {
+    return <div>
+      BAR
+    </div>;
+  }
+}
+
+const root = document.querySelector('#app');
+
+const modal = undefined;
+
+ReactDOM.render(<Router>
+  <Aux>
+    <Switch>
+      <Route path='/' component={Foo} />
+    </Switch>
+    {modal}
+
+    <Bar />
+  </Aux>
+</Router>, root);
